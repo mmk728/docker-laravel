@@ -12,4 +12,9 @@ class QuasiDrug extends Model
     {
         return $this->morphMany('App\Models\Product', 'product');
     }
+
+    public function isReducedTaxRate()
+    {
+        return false;
+    }
 }
