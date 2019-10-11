@@ -20,9 +20,12 @@ Route::get('/binding', function () {
 Route::get('/if', function () {
     return view('if');
 });
-Route::get('for', function () {
+Route::get('/for', function () {
     return view('for');
 });
-Route::get('reverse', function () {
+Route::get('/reverse', function () {
     return view('reverse');
+});
+Route::get('/model', function () {
+    return view('model');
 });
