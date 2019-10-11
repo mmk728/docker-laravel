@@ -59,3 +59,6 @@ Route::get('/watch_computed', function () {
 Route::get('/setter', function () {
     return view('setter');
 });
+Route::get('/watch_model', function () {
+    return view('watch_model');
+});
