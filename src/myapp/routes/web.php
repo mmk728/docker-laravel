@@ -41,3 +41,6 @@ Route::get('/watch', function () {
 Route::get('/lifecycle', function () {
     return view('lifecycle');
 });
+Route::get('/once', function () {
+    return view('once');
+});

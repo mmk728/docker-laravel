@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>    
+    </head>
+    <body>
+        <div id="change">
+            <span v-once>ここは変更時に更新されません: {{ msg }}</span>
+            <p>こっちは変更時更新されます: {{ msg }}</p>
+        </div>
+
+        <script src="js/once.js"></script>
+    </body>
+</html>
