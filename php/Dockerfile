@@ -8,7 +8,12 @@ RUN apt-get update \
 git \
 zip \
 unzip \
-vim
+vim \
+curl \
+gnupg
 RUN docker-php-ext-install pdo_mysql
+RUN curl -sL https://deb.nodesource.com/setup_11.x | bash -
+RUN apt-get install -y nodejs
+RUN npm install npm@latest -g
 
 WORKDIR /var/www
