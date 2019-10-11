@@ -53,3 +53,6 @@ Route::get('/bind', function () {
 Route::get('/method_computed', function () {
     return view('method_computed');
 }); 
+Route::get('/watch_computed', function () {
+    return view('watch_computed');
+}); 
