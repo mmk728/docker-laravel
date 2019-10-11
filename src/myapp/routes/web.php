@@ -12,5 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
+});
+Route::get('/binding', function () {
+    return view('binding');
+});
+Route::get('/if', function () {
+    return view('if');
+});
+Route::get('for', function () {
+    return view('for');
+});
+Route::get('reverse', function () {
+    return view('reverse');
 });
