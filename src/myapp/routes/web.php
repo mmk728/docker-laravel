@@ -35,3 +35,6 @@ Route::get('/component', function () {
 Route::get('/freeze', function () {
     return view('freeze');
 });
+Route::get('/watch', function () {
+    return view('watch');
+});
