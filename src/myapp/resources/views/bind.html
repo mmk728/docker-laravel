@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="bind">
+            <div v-bind:id="dynamicId">{{ dynamicId }}</div>
+            <button v-bind:disabled="isButtonDisabled">Button</button>
+        </div>
+        <script src="js/bind.js"></script>
+    </body>
+</html>

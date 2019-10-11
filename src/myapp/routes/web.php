@@ -47,3 +47,6 @@ Route::get('/once', function () {
 Route::get('/html', function () {
     return view('html');
 });
+Route::get('/bind', function () {
+    return view('bind');
+}); 
