@@ -38,3 +38,6 @@ Route::get('/freeze', function () {
 Route::get('/watch', function () {
     return view('watch');
 });
+Route::get('/lifecycle', function () {
+    return view('lifecycle');
+});
