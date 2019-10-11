@@ -29,3 +29,6 @@ Route::get('/reverse', function () {
 Route::get('/model', function () {
     return view('model');
 });
+Route::get('component', function () {
+    return view('component');
+});
