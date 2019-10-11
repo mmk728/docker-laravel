@@ -44,3 +44,6 @@ Route::get('/lifecycle', function () {
 Route::get('/once', function () {
     return view('once');
 });
+Route::get('/html', function () {
+    return view('html');
+});
