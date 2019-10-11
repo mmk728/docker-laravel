@@ -29,6 +29,9 @@ Route::get('/reverse', function () {
 Route::get('/model', function () {
     return view('model');
 });
-Route::get('component', function () {
+Route::get('/component', function () {
     return view('component');
+});
+Route::get('/freeze', function () {
+    return view('freeze');
 });
