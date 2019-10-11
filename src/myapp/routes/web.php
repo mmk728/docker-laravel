@@ -50,3 +50,6 @@ Route::get('/html', function () {
 Route::get('/bind', function () {
     return view('bind');
 }); 
+Route::get('/method_computed', function () {
+    return view('method_computed');
+}); 
