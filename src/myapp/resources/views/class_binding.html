@@ -8,7 +8,10 @@
             <div
                 class="static"
                 v-bind:class="{ active: isActive, 'text-denger': hasError}"
-            ></div>
+            >判定をバインディングしている</div>
+        </div>
+        <div id="object_binding">
+            <div class="static" v-bind:class="classObject">オブジェクトをバインディングしている</div>
         </div>
     </body>
 </html>
@@ -19,6 +22,15 @@
         data: {
             isActive: true,
             hasError: false
+        }
+    })
+    var app2 = new Vue({
+        el: '#object_binding',
+        data: {
+            classObject: {
+                active: true,
+                'text_denger': true
+            }
         }
     })
 </script>
