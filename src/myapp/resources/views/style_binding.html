@@ -7,6 +7,9 @@
         <div id="style">
             <div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }">赤くて30pxの文字</div>
         </div>
+        <div id="style_object">
+            <div v-bind:style="styleObject">青くて13pxの文字</div>
+        </div>
     </body>
 </html>
 
@@ -16,6 +19,15 @@
         data: {
             activeColor: 'red',
             fontSize: 30
+        }
+    })
+    var app2 = new Vue({
+        el: '#style_object',
+        data: {
+            styleObject: {
+                color: 'blue',
+                fontsize: '13px'
+            }
         }
     })
 </script>
