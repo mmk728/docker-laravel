@@ -68,3 +68,6 @@ Route::get('/class_binding', function () {
 Route::get('/component_binding', function () {
     return view('component_binding');
 });
+Route::get('/style_binding', function () {
+    return view('style_binding');
+});

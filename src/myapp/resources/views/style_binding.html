@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <link rel='stylesheet' href='css/index.css'>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="style">
+            <div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }">赤くて30pxの文字</div>
+        </div>
+    </body>
+</html>
+
+<script>
+    var app = new Vue({
+        el: '#style',
+        data: {
+            activeColor: 'red',
+            fontSize: 30
+        }
+    })
+</script>
