@@ -65,3 +65,6 @@ Route::get('/watch_model', function () {
 Route::get('/class_binding', function () {
     return view('class_binding');
 });
+Route::get('/component_binding', function () {
+    return view('component_binding');
+});
