@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <link rel='stylesheet' href='css/index.css'>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="binding">
+            <div
+                class="static"
+                v-bind:class="{ active: isActive, 'text-denger': hasError}"
+            ></div>
+        </div>
+    </body>
+</html>
+
+<script>
+    var app = new Vue({
+        el: '#binding',
+        data: {
+            isActive: true,
+            hasError: false
+        }
+    })
+</script>

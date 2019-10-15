@@ -62,3 +62,6 @@ Route::get('/setter', function () {
 Route::get('/watch_model', function () {
     return view('watch_model');
 });
+Route::get('/class_binding', function () {
+    return view('class_binding');
+});
