@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="if">
+            <div v-if="awesome">Vue is awesome!</div>
+            <div v-else>Oh no!</div>
+        </div>
+        <div id="wrappar">
+            <template v-if="ok">
+                <h1>okがtrueだったら表示されれる</h1>
+                <p>okだよ！</p>
+                <h2>okがtrueだったら表示されれる</h2>
+                <p>okだよ！</p>
+            </template>
+            <template v-else>
+                <h1>okがfalseだったら表示される</h1>
+                <p>okじゃなかったよ！</p>
+            </template>
+        </div>
+        <div id="random">
+            <div v-if="Math.random() > 0.9">
+                大吉！
+            </div>
+            <div v-else-if="Math.random() > 0.7">
+                中吉！
+            </div>
+            <div v-else-if="Math.random() > 0.5">
+                吉！
+            </div>
+            <div v-else-if="Math.random() > 0.3">
+                凶！
+            </div>
+            <div v-else>
+                大凶！
+            </div>
+        </div>
+    </body>
+</html>
+
+<script>
+    var app = new Vue({
+        el: '#if',
+        data: {
+            awesome: true
+        }
+    })
+    var app2 = new Vue({
+        el: '#wrappar',
+        data: {
+            ok: true
+        }
+    })
+    var app3 = new Vue({
+        el: '#random'
+    })
+</script>

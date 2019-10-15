@@ -71,3 +71,6 @@ Route::get('/component_binding', function () {
 Route::get('/style_binding', function () {
     return view('style_binding');
 });
+Route::get('/if_else', function () {
+    return view('if_else');
+});
