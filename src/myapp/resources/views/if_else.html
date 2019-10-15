@@ -37,6 +37,17 @@
                 大凶！
             </div>
         </div>
+        <div id="login">
+            <template v-if="loginType === 'username'">
+                <label>UserName</label>
+                <input placeholder="Enter your username" key="username-input">
+            </template>
+            <template v-else>
+                <label>Email</label>
+                <input placeholder="Enter your email" key="email-input">
+            </template>
+            <button v-on:click="toggle">Toggle login type</button>
+        </div>
     </body>
 </html>
 
@@ -55,5 +66,19 @@
     })
     var app3 = new Vue({
         el: '#random'
+    })
+    var app4 = new Vue({
+        el: '#login',
+        data: {
+            loginType: 'username'
+        },
+        methods: {
+            toggle: function () {
+                if (this.loginType === 'username') {
+                    return this.loginType = 'email'
+                }
+                this.loginType = 'username'
+            }
+        }
     })
 </script>
