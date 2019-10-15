@@ -80,3 +80,6 @@ Route::get('/show', function () {
 Route::get('/for2', function () {
     return view('for2');
 });
+Route::get('/object_for', function () {
+    return view('object_for');
+});

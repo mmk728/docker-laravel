@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <ul id="object">
+            <li v-for="value of object">
+                {{ value }}
+            </li>
+        </ul>
+    </body>
+</html>
+
+<script>
+    var app = new Vue({
+        el: '#object',
+        data: {
+            object: {
+                title: 'タイトルだよ',
+                author: '著者だよ',
+                publishedAt: '発行日だよ'
+            }
+        }
+    })
+</script>
