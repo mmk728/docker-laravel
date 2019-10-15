@@ -5,8 +5,8 @@
     </head>
     <body>
         <ul id="object">
-            <li v-for="value of object">
-                {{ value }}
+            <li v-for="(value, name) of object">
+                {{ name }}: {{ value }}
             </li>
         </ul>
     </body>
