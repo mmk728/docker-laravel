@@ -9,6 +9,9 @@
                 {{ index }} - {{ name }}: {{ value }}
             </li>
         </ul>
+        <ul id="filter">
+            <li v-for="n in evenNumbers">{{ n }}</li>
+        </ul>
     </body>
 </html>
 
@@ -20,6 +23,19 @@
                 title: 'タイトルだよ',
                 author: '著者だよ',
                 publishedAt: '発行日だよ'
+            }
+        }
+    })
+    var app2 = new Vue({
+        el: '#filter',
+        data: {
+            numbers: [ 1,2,3,4,5,6 ]
+        },
+        computed: {
+            evenNumbers: function () {
+                return this.numbers.filter(function (number) {
+                    return number % 2 === 0
+                })
             }
         }
     })
