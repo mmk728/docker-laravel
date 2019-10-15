@@ -13,6 +13,9 @@
         <div id="override">
             <div v-bind:style="[baseStyles, overrideStyles]">緑で20pxの文字が表示されていればオーバーライドできている</div>
         </div>
+        <div id="mlutiple">
+            <div v-bind:style="{ display: ['-webkit-box', '-ms-flexbox', 'flex'] }">ブラウザ的にflexになっていればよさそう</div>
+        </div>
     </body>
 </html>
 
@@ -45,5 +48,8 @@
                 fontSize: '20px'
             }
         }
+    })
+    var app4 = new Vue({
+        el: '#mlutiple'
     })
 </script>
