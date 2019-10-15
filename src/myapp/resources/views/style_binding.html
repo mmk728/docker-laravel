@@ -10,6 +10,9 @@
         <div id="style_object">
             <div v-bind:style="styleObject">青くて13pxの文字</div>
         </div>
+        <div id="override">
+            <div v-bind:style="[baseStyles, overrideStyles]">緑で20pxの文字が表示されていればオーバーライドできている</div>
+        </div>
     </body>
 </html>
 
@@ -27,6 +30,19 @@
             styleObject: {
                 color: 'blue',
                 fontsize: '13px'
+            }
+        }
+    })
+    var app3 = new Vue({
+        el: '#override',
+        data: {
+            baseStyles: {
+                color: 'black',
+                fontSize: '10px'
+            },
+            overrideStyles: {
+                color: 'green',
+                fontSize: '20px'
             }
         }
     })
