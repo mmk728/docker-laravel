@@ -13,6 +13,9 @@
         <div id="object_binding">
             <div class="static" v-bind:class="classObject">オブジェクトをバインディングしている</div>
         </div>
+        <div id="compute_binding">
+            <div class="static" v-bind:class="classObject">算出プロパティをバインディングしている</div>
+        </div>
     </body>
 </html>
 
@@ -30,6 +33,21 @@
             classObject: {
                 active: true,
                 'text_denger': true
+            }
+        }
+    })
+    var app3 = new Vue({
+        el: '#compute_binding',
+        data: {
+            isActive: true,
+            error: null
+        },
+        computed: {
+            classObject: function() {
+                return {
+                    active: this.isActive && !this.error,
+                    'text_denger': this.error && this.error.type === 'fatal'
+                }
             }
         }
     })
