@@ -9,6 +9,11 @@
                 {{ item.message }}
             </li>
         </ul>
+        <ul id="example-2">
+            <li v-for="(item, index) in items">
+                {{ parentMessage }} - {{ index }} - {{ item.message }}
+            </li>
+        </ul>
     </body>
 </html>
 
@@ -21,6 +26,17 @@
                 { message: 'やっほー2' },
                 { message: 'やっほー3' },
                 { message: 'やっほー4' }
+            ]
+        }
+    })
+    var app2 = new Vue({
+        el: '#example-2',
+        data: {
+            parentMessage: 'Parent',
+            items: [
+                { message: 'いえい' },
+                { message: 'いえいいえい' },
+                { message: 'いえいいえいいえい' }
             ]
         }
     })
