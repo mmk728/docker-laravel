@@ -8,6 +8,9 @@
             <button v-on:click="counter += 1">Add 1</button>
             <p>ボタンが押された回数は {{ counter }}回です</p>
         </div>
+        <div id="example-2">
+            <button v-on:click="greet">Greet</button>
+        </div>
     </body>
 </html>
 
@@ -16,6 +19,20 @@
         el: '#example-1',
         data: {
             counter: 0
+        }
+    })
+    var example2 = new Vue({
+        el: '#example-2',
+        data: {
+            name: 'Vue.js'
+        },
+        methods: {
+            greet: function () {
+                alert('Hello' + this.name + '!')
+                if (event) {
+                    alert(event.target.tagName)
+                }
+            }
         }
     })
 </script>
