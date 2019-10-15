@@ -15,6 +15,11 @@
             <button v-on:click="say('hi')">hiっていうボタン</button>
             <button v-on:click="say('nandeyanen')">nandeyanenっていうボタン</button>
         </div>
+        <div id="example-4">
+            <button v-on:click="warn('Form cannot be submitted yet.', $event)">
+                Submit
+            </button>
+        </div>
     </body>
 </html>
 
@@ -44,6 +49,15 @@
         methods: {
             say: function (message) {
                 alert(message)
+            }
+        }
+    })
+    var example4 = new Vue({
+        el: '#example-4',
+        methods: {
+            warn: function (message, event) {
+                if (event) event.preventDefault()
+                alert(message + event)
             }
         }
     })
