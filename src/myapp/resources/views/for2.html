@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <ul id="example-1">
+            <li v-for="item in items">
+                {{ item.message }}
+            </li>
+        </ul>
+    </body>
+</html>
+
+<script>
+    var app = new Vue({
+        el: '#example-1',
+        data: {
+            items: [
+                { message: 'やっほー1' },
+                { message: 'やっほー2' },
+                { message: 'やっほー3' },
+                { message: 'やっほー4' }
+            ]
+        }
+    })
+</script>

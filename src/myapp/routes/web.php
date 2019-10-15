@@ -77,3 +77,6 @@ Route::get('/if_else', function () {
 Route::get('/show', function () {
     return view('show');
 });
+Route::get('/for2', function () {
+    return view('for2');
+});
