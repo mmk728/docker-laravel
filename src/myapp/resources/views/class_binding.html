@@ -16,6 +16,9 @@
         <div id="compute_binding">
             <div class="static" v-bind:class="classObject">算出プロパティをバインディングしている</div>
         </div>
+        <div id="array">
+            <div class="static" v-bind:class="[activeClass, errorClass]">配列でバインディングしている</div>
+        </div>
     </body>
 </html>
 
@@ -32,7 +35,7 @@
         data: {
             classObject: {
                 active: true,
-                'text_denger': true
+                'text_danger': true
             }
         }
     })
@@ -46,9 +49,16 @@
             classObject: function() {
                 return {
                     active: this.isActive && !this.error,
-                    'text_denger': this.error && this.error.type === 'fatal'
+                    'text_danger': this.error && this.error.type === 'fatal'
                 }
             }
+        }
+    })
+    var app4 = new Vue({
+        el: '#array',
+        data: {
+            activeClass: 'active',
+            errorClass: 'text_danger'
         }
     })
 </script>
