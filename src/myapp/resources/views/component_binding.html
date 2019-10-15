@@ -5,7 +5,7 @@
     </head>
     <body>
         <div id="component-binding">
-            <my-component class="baz boo"></my-component>
+            <my-component class="baz boo" v-bind:class="{ active:isActive }"></my-component>
         </div>
     </body>
 </html>
@@ -14,5 +14,10 @@
     Vue.component('my-component', {
         template: '<p class="foo bar">Hi</p>'
     })
-    new Vue({ el: '#component-binding'})
+    new Vue({
+        el: '#component-binding',
+        data: {
+            isActive: true
+        }
+    })
 </script>
