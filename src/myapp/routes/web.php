@@ -83,3 +83,6 @@ Route::get('/for2', function () {
 Route::get('/object_for', function () {
     return view('object_for');
 });
+Route::get('/todo', function () {
+    return view('todo');
+});
