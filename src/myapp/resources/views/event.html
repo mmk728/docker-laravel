@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="example-1">
+            <button v-on:click="counter += 1">Add 1</button>
+            <p>ボタンが押された回数は {{ counter }}回です</p>
+        </div>
+    </body>
+</html>
+
+<script>
+    var example1 = new Vue({
+        el: '#example-1',
+        data: {
+            counter: 0
+        }
+    })
+</script>
