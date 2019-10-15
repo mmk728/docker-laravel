@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="ok">
+            <h1 v-show="ok">OK!</h1>
+        </div>
+    </body>
+</html>
+
+<script>
+    var app = new Vue({
+        el: '#ok',
+        data: {
+            ok: true
+        }
+    })
+</script>
