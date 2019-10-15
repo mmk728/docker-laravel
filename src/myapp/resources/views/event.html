@@ -11,6 +11,10 @@
         <div id="example-2">
             <button v-on:click="greet">Greet</button>
         </div>
+        <div id="example-3">
+            <button v-on:click="say('hi')">hiっていうボタン</button>
+            <button v-on:click="say('nandeyanen')">nandeyanenっていうボタン</button>
+        </div>
     </body>
 </html>
 
@@ -32,6 +36,14 @@
                 if (event) {
                     alert(event.target.tagName)
                 }
+            }
+        }
+    })
+    var example3 = new Vue({
+        el: '#example-3',
+        methods: {
+            say: function (message) {
+                alert(message)
             }
         }
     })
