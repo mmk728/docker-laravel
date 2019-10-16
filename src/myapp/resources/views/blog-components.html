@@ -14,6 +14,9 @@
                 ></blog-post>
             </div>
         </div>
+        <div id="alert-box">
+            <alert-component>この文字が出るよ！</alert-component>
+        </div>
     </body>
 </html>
 
@@ -39,5 +42,18 @@
             ],
             postFontSize: 1,
         }
+    })
+
+    Vue.component('alert-component', {
+        template: `
+            <div class="demo-alert-box">
+                <strong>Error!</strong>
+                <slot></slot>
+            </div>
+        `
+    })
+
+    new Vue({
+        el: '#alert-box',
     })
 </script>
