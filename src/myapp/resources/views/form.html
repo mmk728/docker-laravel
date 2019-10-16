@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="message">
+            <input v-model="message" placeholder="edit me">
+            <p>Message is : {{ message }}</p>
+        </div>
+    </body>
+</html>
+
+<script>
+    var mes = new Vue({
+        el: '#message',
+        data: {
+            message: ''
+        }
+    })
+</script>

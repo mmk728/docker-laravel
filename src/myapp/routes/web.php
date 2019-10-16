@@ -89,3 +89,6 @@ Route::get('/todo', function () {
 Route::get('/event', function () {
     return view('event');
 });
+Route::get('/form', function () {
+    return view('form');
+});
