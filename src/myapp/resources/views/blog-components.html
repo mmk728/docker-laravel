@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="blog-post-event-demo">
+            <div :style="{ fontSize: postFontSize + 'em' }">
+                <blog-post
+                    v-for="post in posts"
+                    v-bind:key="post.id"
+                    v-bind:post="post"
+                    v-on:enlarge-text="postFontSize += 0.1"
+                ></blog-post>
+            </div>
+        </div>
+    </body>
+</html>
+
+<script>
+    Vue.component('blog-post', {
+        props: ['post'],
+        template: `
+            <div class="blog-post">
+                <h3>{{ post.title }}</h3>
+                <button v-on:click="$emit('enlarge-text')">文字を大きくする</button>
+                <div v-html="post.content"></div>
+            </div>
+        `}
+    )
+    new Vue({
+        el: '#blog-post-event-demo',
+        data: {
+            posts: [
+                { id: 1, title: '目次1', content: '本文1<br>改行した<b>太字</b>'},
+                { id: 2, title: '目次2', content: '本文2<br>改行した'},
+                { id: 3, title: '目次3', content: '本文3'},
+                { id: 4, title: '目次4', content: '本文4'},
+            ],
+            postFontSize: 1,
+        }
+    })
+</script>

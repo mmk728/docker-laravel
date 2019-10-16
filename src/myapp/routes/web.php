@@ -95,3 +95,6 @@ Route::get('/form', function () {
 Route::get('/components', function () {
     return view('components');
 });
+Route::get('/blog-components', function () {
+    return view('blog-components');
+});
