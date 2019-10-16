@@ -14,12 +14,6 @@
                 ></blog-post>
             </div>
         </div>
-        <div id="model">
-            <input v-model="serachText">
-            <input
-                v-bind:value="serachText"
-                v-on:input="serachText=$event.target.value">
-        </div>
     </body>
 </html>
 
@@ -44,13 +38,6 @@
                 { id: 4, title: '目次4', content: '本文4'},
             ],
             postFontSize: 1,
-        }
-    })
-
-    var app = new Vue({
-        el: '#model',
-        data: {
-            serachText: ''
         }
     })
 </script>
