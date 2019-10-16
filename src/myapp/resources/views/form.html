@@ -45,6 +45,14 @@
             </select>
             <span>Selected: {{ selected }}</span>
         </div>
+        <div id="multi-select">
+            <select v-model="selectValues" multiple>
+                <option>A</option>
+                <option>B</option>
+                <option>C</option>
+            </select>
+            <span>Selected multiple: {{ selectValues }}</span>
+        </div>
     </body>
 </html>
 
@@ -83,6 +91,12 @@
         el: '#select',
         data: {
             selected: ''
+        }
+    })
+    var multi_select = new Vue({
+        el: '#multi-select',
+        data: {
+            selectValues: []
         }
     })
 </script>
