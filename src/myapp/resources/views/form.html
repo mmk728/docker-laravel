@@ -61,6 +61,11 @@
             </select>
             <span>おみくじ: {{ selected }}</span>
         </div>
+        <div id="toggle">
+            <input type="checkbox" v-model="toggle" true-value="yes" false-value="no">
+            <br>
+            <span>Toggle is: {{ toggle }}</span>
+        </div>
     </body>
 </html>
 
@@ -118,6 +123,12 @@
                 { text: '4', value: '4を選んだあなたのラッキーカラーはピンク！'},
                 { text: '5', value: '5を選んだあなたのラッキーカラーは白！'},
             ]
+        }
+    })
+    var toggle = new Vue({
+        el: '#toggle',
+        data: {
+            toggle: ''
         }
     })
 </script>
