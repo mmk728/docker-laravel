@@ -5,7 +5,7 @@
     </head>
     <body>
         <div id="message">
-            <input v-model.lazy="message" placeholder="edit me">
+            <input v-model.trim="message" placeholder="edit me">
             <p>Message is : {{ message }}</p>
         </div>
         <br>
