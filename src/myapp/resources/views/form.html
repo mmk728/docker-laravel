@@ -36,6 +36,15 @@
             <br>
             <span>You picked: {{ picked }}</span>
         </div>
+        <div id="select">
+            <select v-model="selected">
+                <option disabled value="">Please select one</option>
+                <option>A</option>
+                <option>B</option>
+                <option>C</option>
+            </select>
+            <span>Selected: {{ selected }}</span>
+        </div>
     </body>
 </html>
 
@@ -68,6 +77,12 @@
         el: '#radio',
         data: {
             picked: ''
+        }
+    })
+    var select = new Vue({
+        el: '#select',
+        data: {
+            selected: ''
         }
     })
 </script>
