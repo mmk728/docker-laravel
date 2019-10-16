@@ -14,6 +14,10 @@
             <br>
             <textarea v-model="message" placeholder="multiline edit me"></textarea>
         </div>
+        <div id="check">
+            <input type="checkbox" id="checkbox" v-model="checked">
+            <label for="checkbox">{{ checked }}</label>
+        </div>
     </body>
 </html>
 
@@ -28,6 +32,12 @@
         el: '#multi-message',
         data: {
             message: ''
+        }
+    })
+    var check = new Vue({
+        el: '#check',
+        data: {
+            checked: false
         }
     })
 </script>
