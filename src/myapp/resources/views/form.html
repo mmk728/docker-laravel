@@ -53,6 +53,14 @@
             </select>
             <span>Selected multiple: {{ selectValues }}</span>
         </div>
+        <div id="for-select">
+            <select v-model="selected">
+                <option v-for="option in options" v-bind:value="option.value">
+                    {{ option.text }}
+                </option>
+            </select>
+            <span>おみくじ: {{ selected }}</span>
+        </div>
     </body>
 </html>
 
@@ -97,6 +105,19 @@
         el: '#multi-select',
         data: {
             selectValues: []
+        }
+    })
+    var for_select = new Vue({
+        el: '#for-select',
+        data: {
+            selected: '',
+            options: [
+                { text: '1', value: '1を選んだあなたのラッキーカラーは赤！'},
+                { text: '2', value: '2を選んだあなたのラッキーカラーは水色！'},
+                { text: '3', value: '3を選んだあなたのラッキーカラーは黄色！'},
+                { text: '4', value: '4を選んだあなたのラッキーカラーはピンク！'},
+                { text: '5', value: '5を選んだあなたのラッキーカラーは白！'},
+            ]
         }
     })
 </script>
