@@ -21,6 +21,13 @@
                 v-bind:title="post.title"
             ></blog-components>
         </div>
+        <div id="blog-post2">
+            <blog-post-components
+                v-for="post in posts"
+                v-bind:key="post.id"
+                v-bind:post="post"
+            ></blog-post-components>
+        </div>
     </body>
 </html>
 
@@ -59,6 +66,28 @@
                 { id: 1, title: '目次2-1' },
                 { id: 2, title: '目次2-2' },
                 { id: 3, title: '目次2-3' }
+            ]
+        }
+    })
+
+    Vue.component('blog-post-components', {
+        props: ['post'],
+        template: `
+            <div class="blog-post">
+                <h3>{{ post.title }}</h3>
+                <div v-html="post.content"></div>
+            </div>
+        `
+    })
+
+    new Vue({
+        el: '#blog-post2',
+        data: {
+            posts: [
+                { id: 1, title: '目次3-1', content: '本文3-1<br>改行した<b>太字</b>'},
+                { id: 2, title: '目次3-2', content: '本文3-2<br>改行した'},
+                { id: 3, title: '目次3-3', content: '本文3-3'},
+                { id: 4, title: '目次3-4', content: '本文3-4'},
             ]
         }
     })
