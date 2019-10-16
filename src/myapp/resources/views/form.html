@@ -28,6 +28,14 @@
             <br>
             <span>Checked Name is: {{ checkedNames }}</span>
         </div>
+        <div id="radio">
+            <input type="radio" id="one" value="One" v-model="picked">
+            <label for="one">One</label>
+            <input type="radio" id="two" value="Two" v-model="picked">
+            <label for="two">Two</label>
+            <br>
+            <span>You picked: {{ picked }}</span>
+        </div>
     </body>
 </html>
 
@@ -54,6 +62,12 @@
         el: '#multi-check',
         data: {
             checkedNames: []
+        }
+    })
+    var radio = new Vue({
+        el: '#radio',
+        data: {
+            picked: ''
         }
     })
 </script>
