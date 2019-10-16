@@ -92,3 +92,6 @@ Route::get('/event', function () {
 Route::get('/form', function () {
     return view('form');
 });
+Route::get('/components', function () {
+    return view('components');
+});
