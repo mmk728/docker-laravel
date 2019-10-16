@@ -9,6 +9,18 @@
             <button-component></button-component>
             <button-component></button-component>
         </div>
+        <div id="blog">
+            <blog-post title="目次1"></blog-post>
+            <blog-post title="目次2"></blog-post>
+            <blog-post title="目次3"></blog-post>
+        </div>
+        <div id="blog-post-demo">
+            <blog-components
+                v-for="post in posts"
+                v-bind:key="post.id"
+                v-bind:title="post.title"
+            ></blog-components>
+        </div>
     </body>
 </html>
 
@@ -24,5 +36,30 @@
 
     new Vue({
         el: '#components-demo'
+    })
+    
+    Vue.component('blog-post', {
+        props: ['title'],
+        template: '<h3>{{ title }}</h3>'
+    })
+
+    new Vue({
+        el: '#blog'
+    })
+
+    Vue.component('blog-components', {
+        props: ['title'],
+        template: '<h3>{{ title }}</h3>',
+    })
+
+    new Vue({
+        el: '#blog-post-demo',
+        data: {
+            posts: [
+                { id: 1, title: '目次2-1' },
+                { id: 2, title: '目次2-2' },
+                { id: 3, title: '目次2-3' }
+            ]
+        }
     })
 </script>
