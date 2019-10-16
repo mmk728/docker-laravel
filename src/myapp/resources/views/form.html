@@ -18,6 +18,16 @@
             <input type="checkbox" id="checkbox" v-model="checked">
             <label for="checkbox">{{ checked }}</label>
         </div>
+        <div id="multi-check">
+            <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+            <label for="jack">Jack</label>
+            <input type="checkbox" id="mickey" value="Mickey" v-model="checkedNames">
+            <label for="mickey">Mickey</label>
+            <input type="checkbox" id="minnie" value="Minnie" v-model="checkedNames">
+            <label for="minnie">Minnie</label>
+            <br>
+            <span>Checked Name is: {{ checkedNames }}</span>
+        </div>
     </body>
 </html>
 
@@ -38,6 +48,12 @@
         el: '#check',
         data: {
             checked: false
+        }
+    })
+    var multi_check = new Vue({
+        el: '#multi-check',
+        data: {
+            checkedNames: []
         }
     })
 </script>
