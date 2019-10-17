@@ -1,7 +1,7 @@
 <template>
     <div>
         <header>
-            <Nabvar />
+            <Navbar />
         </header>
         <main>
             <div class="container">
