@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css">
 
         <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
     <body>
         <div id="app"></div>
