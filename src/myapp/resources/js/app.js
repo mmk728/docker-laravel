@@ -4,6 +4,10 @@ import store from './store/index'
 import App from './App.vue'
 import './bootstrap'
 
+const createApp = async () => {
+    await store.dispatch('auth/currentUser')
+}
+
 new Vue({
     el: '#app',
     router,
@@ -11,3 +15,5 @@ new Vue({
     components: { App },
     template: '<App />'
 })
+
+createApp()
